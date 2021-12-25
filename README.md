@@ -1,53 +1,32 @@
-# Welcome to Remix!
+<h1 align="center">Remix Note ✏️</h1>
 
-- [Remix Docs](https://remix.run/docs)
+<p align="center">simple local note taking app which covers a lots of great Remix features</p>
 
-## Development
+![App screenshot](./screenshots/home.png)
 
-From your terminal:
+![App screenshot](./screenshots/note.png)
 
-```sh
-npm run dev
-```
+## Technologies
 
-This starts your app in development mode, rebuilding assets on file changes.
+- Remix
+- styled-components
+- redis
+- typescript
 
-## Deployment
+## Setting up development environment 🛠
 
-First, build your app for production:
+1. clone the project and cd into folder
 
-```sh
-npm run build
-```
+2. type `npm install` or `yarn install`
 
-Then run the app in production mode:
+3. setup your redis server
 
-```sh
-npm start
-```
+4. rename `.env.example` to `.env` and then replace "REDIS_SERVER" with the redis Server URL
 
-Now you'll need to pick a host to deploy it to.
+5. type `npm run start` or `yarn start` for development
 
-### DIY
+6. type `npm run build` or `yarn build` for production
 
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
+## License
 
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
-
-### Using a Template
-
-When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
-
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npx create-remix@latest
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
-```
+[MIT](https://opensource.org/licenses/MIT)
