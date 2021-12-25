@@ -20,12 +20,6 @@ export const meta: MetaFunction = () => {
   return { title: 'Remix Note' };
 };
 
-export const loader: LoaderFunction = async () => {
-  const response = await redis.set('foo', 'yet another value');
-  console.log(response);
-  return 'ok';
-};
-
 export const links: LinksFunction = () => {
   return [
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

@@ -13,10 +13,9 @@ export const meta: MetaFunction = ({ data }) => {
   return { title: `Edit -> ${data.title}` };
 };
 
-export const loader: LoaderFunction = async ({ params }) => {
+export const loader: LoaderFunction = async ({ params, request }) => {
   const res = await redis.get('notes');
   if (!res) return null;
-
   const data: NoteType[] = JSON.parse(res);
   const note = data.find((note) => note.id === params.id);
 
